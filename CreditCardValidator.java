@@ -5,12 +5,12 @@ public class CreditCardValidator{
 	public static void main(String [] args){
 
 
-	Scanner input = new scanner (System.in);
+	Scanner input = new Scanner (System.in);
 
 	System.out.println("Enter your credit card number : ");
 	String cardNumber = input.nextLine();
 
-	String [] cardPin = new String [cardNumber];
+	int [] cardPin = new int[cardNumber];
 
 
 	
