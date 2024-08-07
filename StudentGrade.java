@@ -19,34 +19,30 @@ public class StudentGrade{
 
 	int [][]  nameAndSubject = new int [numberOfStudent][numberOfSubject];
 	double [] average = new double [numberOfSubject];
-	
 
 	for(int count = 0, student = 1 ; count < numberOfStudent; count++, student++){
 	int sum = 0;
-		for(int counter = 0, subject = 1 ;  counter < numberOfSubject; counter ++ ,subject++){
+	int counter = 0;
+	int subject = 1;
+		for(counter = 0, subject = 1 ;  counter < numberOfSubject; counter ++ ,subject++){
 		System.out.println("student "+ student+"\n subject"+subject+ ":");
 		nameAndSubject [count][counter] = input.nextInt();
 
 		sum += nameAndSubject [count][counter] ;
-		
-		average [counter] =  sum / numberOfSubject ;
-		
-
-		System.out.println(sum);
-		System.out.println();
 		} 
 
+	
+	
+	average [count] =  sum / numberOfSubject ;
+		System.out.println();
+		System.out.println(sum);
 		
+	
 			}
-		for(int index = 0;index < numberOfSubject; index++){
-			for(int element = 0; element < average; element ++){
-
-			}
-
 		
-
-		}
 		
-System.out.println(Arrays.toString (average));
+		
+		System.out.println(Arrays.toString (average));
+
 	  }
 }
