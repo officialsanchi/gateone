@@ -31,16 +31,22 @@ public class StudentGrade{
 		
 		average [counter] =  sum / numberOfSubject ;
 		
-		
 
-		
-		
 		System.out.println(sum);
-		
 		System.out.println();
 		} 
+
+		
 			}
+		for(int index = 0;index < numberOfSubject; index++){
+			for(int element = 0; element < average; element ++){
+
+			}
+
+		
+
+		}
 		
 System.out.println(Arrays.toString (average));
-	    }
+	  }
 }
