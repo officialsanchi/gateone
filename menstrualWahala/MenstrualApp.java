@@ -1,6 +1,4 @@
-//import java.time.LocalDateTime;
-//import java. time.format.DateTimeFormatter;
-import java.util.Scanner;
+import java.util.*;
 public class MenstrualApp{
 	public static void main(String [] args){
 
