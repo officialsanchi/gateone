@@ -26,10 +26,11 @@ public String getAddress(){
 	return address;
 	 }
 public String  getEmail(){
+return email;
 }
 
 public String toString(){
-	return String.Format("""
+	return String.format("""
 	
 	FirstName: %s
 	LastName : %s

@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.ArrayList;
 public class PhoneBook{
 public static void main (String [] args){
 	Scanner collect = new Scanner(System.in);
@@ -40,7 +41,7 @@ public static void main (String [] args){
 
 	int number = collect.nextInt();
 		while(number == 1){
-		System.out.print("Enter first name :");
+			System.out.print("Enter first name :");
 			firstName = collect.nextLine();
 			addContact.add(firstName);
 
