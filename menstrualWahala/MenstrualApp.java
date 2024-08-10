@@ -1,10 +1,12 @@
-import java.util.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 public class MenstrualApp{
 	public static void main(String [] args){
 
 	Scanner scanner = new Scanner(System.in);
-	//LocalDate  localDate = LocalDate. now();
-	//DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofpattern ("");
+	LocalDate  localDate = LocalDate. now();
+	DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofpattern (" dd - mm - yyyy");
 
 
 System.out.println("CHECK YOUR MENSTRUAL CYCLE ");

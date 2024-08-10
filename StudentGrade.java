@@ -25,7 +25,7 @@ public class StudentGrade{
 	int counter = 0;
 	int subject = 1;
 		for(counter = 0, subject = 1 ;  counter < numberOfSubject; counter ++ ,subject++){
-		System.out.println("student "+ student+"\n subject"+subject+ ":");
+		System.out.println("student "+ student+" subject"+subject+ ":");
 		nameAndSubject [count][counter] = input.nextInt();
 
 		sum += nameAndSubject [count][counter] ;

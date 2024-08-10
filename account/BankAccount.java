@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-public class BankOne{
+public class BankAccount{
 static ArrayList<Account>accounts = new ArrayList<>();
 static Scanner input = new Scanner (System.in);
 private static int number =0;
@@ -89,7 +89,7 @@ switch(options){
 			display();
 	case "4": System.out.print("Bye! Bye!!");
 			System.exit(1);
-	default: System.out.println(" Don't be stupid, come on follow the option: "); display();
+	default: System.out.println(" Don't be stupid, follow the option: "); display();
 
 }
 
@@ -97,7 +97,7 @@ switch(options){
 
 
 public static void main(String[] args){
-System.out.println(" Welcome to Cohort 21 Union Bank ");
+System.out.println(" WELCOME TO MY BANKING APP");
 display();
 }
 

@@ -1,47 +1,56 @@
 public class Account{
-	private double balance;
-	private String name;
-	private String pin;
-	private String number;
-public Account(String name,String pin,String number){
 
-this.name = name;
-this.pin = pin;
-this.number = number;
+private double balance;
+private String name;
+private String pin;
+private String number;
+
+public Account(String inputName, String inputPin, String inputNumber){
+name = inputName;
+pin = inputPin;
+number = inputNumber;
 }
+
 public void deposit(double amount){
-	if (amount >0){
-		balance = balance + amount;
-	}
-	else{
-	System.out.print("amount must be be less than zero");
-}
-	public void withdraw(double amount, String myPin){
-		pinValidation(pin);
-		if(balance > amount){
-	 balance = balance - amount;
-	}
+if(amount>0){
+ balance = balance + amount;
+}else System.out.print("amount must not be less than zero");
 }
 
-	private void pinValidation(String pin){
-		if(!this.pin.equals(pin)){
-			System.out.print("invaild pin");
-		}
-	}
+public void withdraw( double amount, String myPin){
+pinValidation(myPin);
+if(balance> amount){
+balance = balance - amount;
+}
+}
 
-	public double checkBalance(String pin){
+private void pinValidation(String pin){
+if(!this.pin.equals(pin)){
+System.out.print("invalid pin");
+}
 
-	pinValidation(pin);
-	return balance;
 }
-	public String getName(){
-	return name;
+
+public double checkBalance(String number, String pin){
+pinValidation(pin);
+return balance;
 }
-	public String getPin(){
-	return pin;
+public String getName(){
+return name;
 }
-	public String getNumber(){
-	return number;
-	
-	}
+public String getPin(){
+return pin;
+}
+public String getNumber(){
+return number;
+}
+public String toString(){
+return String.format("""  
+	Name: %s
+	Account Number: %s
+	Balance: %.2f
+	Pin: %s %n %n
+	""",name,number,balance,">>>>");
+}
+
 }

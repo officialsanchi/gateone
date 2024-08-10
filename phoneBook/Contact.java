@@ -1,45 +1,42 @@
-public class Contact{
-	private String firstName;
-	private String lastName;
-	private String phoneNumber;
-	private String address;
-	private String email;
 
-	public Contact(String firstName, String lastName,String phoneNumber,String address,String email){
-	this.firstName = firstName;
-	this.lastName =  lastName;
-	this.phoneNumber = phoneNumber;
-	this.address = address;
-	this.email = email;
+public class Contact {
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phoneNumber;
 
-	}
-public String getFirstName(){
-	return firstName;
-	}
-public String getLastName(){	
-	return lastName;
-	}
-public String getPhoneNumber(){
-	return phoneNumber;
-	}
-public String getAddress(){
-	return address;
-	 }
-public String  getEmail(){
-return email;
-}
+    public Contact(String firstName, String lastName, String email, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
 
-public String toString(){
-	return String.format("""
-	
-	FirstName: %s
-	LastName : %s
-	PhoneNumber : %s
-	Address : %s
-	Email: %s
-""", firstName, lastName, phoneNumber,address,email);
+    public String getFirstName() {
+        return firstName;
+    }
 
-	}
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String toString() {
+
+        return String.format("""
+                First Name: %s
+                Last Name: %s
+                Email: %s
+                Phone Number: %s
+                """, firstName, lastName, email, phoneNumber);
 
 
+    }
 }
