@@ -1,59 +1,34 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
-public class MenstrualApp{
-	public static void main(String [] args){
 
-	Scanner scanner = new Scanner(System.in);
-	LocalDate  localDate = LocalDate. now();
-	DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofpattern (" dd - mm - yyyy");
+public class MenstrualApp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        LocalDate date = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
 
-System.out.println("CHECK YOUR MENSTRUAL CYCLE ");
+        System.out.println("CHECK YOUR MENSTRUAL CYCLE");
 
+        System.out.println("Enter the first day of your period (YYYY-MM-DD):");
+        String firstDayInput = scanner.next();
+        LocalDate firstDay = LocalDate.parse(firstDayInput, formatter);
 
-System.out.print(""" 
+        LocalDate nextPeriod = firstDay.plusDays(25);
+        LocalDate lengthOfFlow = firstDay.plusDays(4 - 1);
+        LocalDate safePeriod1 = lengthOfFlow.plusDays(3);
+        LocalDate ovulation = safePeriod1.plusDays(3);
+        LocalDate safePeriod2 = ovulation.plusDays(4);
 
-	*HOW TO KNOW YOUR MENSTRUAL CYCLE USING THREE MONTHS RECORD*
-
-	#. Keep record of your first dates(number) of period for three months
-	#. Add the dates(number)  
-	#. Divide step 2 by three
-	#.Step 3 will be determined by the number month used
-
-	NOTE: IF YOUR MENSTRUAL CYCLE IS BELOW 21 DAYS OR ABOVE 35 DAYS ITS ABNORMAL \n BUT IF IT IS BETWEEN 21 DAYS AND 35 DAYS IT IS NORMAL 
-
-	""");
-
-	
-
-
-System.out.println("Enter the first day of period :");
-	int dayOfPeriod = scanner.nextInt();
-System.out.println("Enter your menstrual cycle : ");
-	int cycle = scanner.nextInt();
-
-
-	int nextperiod = dayOfPeriod + cycle;
-	int ovulation = dayOfPeriod + 14 ;
-	int fertileDays = 2 + ovulation + 2;
-	int safeDay = ovulation - 3; 
-	int safe = dayOfPeriod - 6;
-	int safeDays = safeDay + safe;
-	
-
-
-	System.out.println("nextperiod : " + nextperiod);
-	System.out.println("ovulation :"  + ovulation);
-	System.out.println("fertileDays :" + fertileDays);
-	System.out.println("safeDays : "  + safeDays );
-
-
-	
-	
-
-
-	}
-
-
+        System.out.println("Your next period is expected on: " + nextPeriod.format(formatter));
+	System.out.println("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>");
+        System.out.println("Your bleeding date should be within: " + firstDay + " to " + lengthOfFlow);
+	System.out.println("**************************************************************************");
+        System.out.println("Your safe period for sexual intercourse is within: " + lengthOfFlow.plusDays(1) + " to " + safePeriod1);
+	System.out.println("######################################################################################################");
+        System.out.println("Your ovulation date is: " + ovulation);
+	System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+        System.out.println("Your second safe period is within: " + ovulation.plusDays(1) + " to " + safePeriod2);
+    }
 }
