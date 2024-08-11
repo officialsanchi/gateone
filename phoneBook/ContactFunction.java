@@ -19,6 +19,7 @@ public class ContactFunction {
     public static ArrayList<Contact> viewAllContacts(){
         return contacts;
     }
+
     public static Contact findByPhoneNumber(){
         Contact foundContact = null;
         String phoneNumber = input("Enter phone number: ");
@@ -32,6 +33,49 @@ public class ContactFunction {
         return foundContact;
     }
 
+public static Contact findByFirstName(){
+	Contact foundContact = null;
+	String firstName = input("Enter first name : ");
+	for(Contact contact : contacts){
+	if(contact.getFirstName()==null){
+		foundContact = null;
+	}
+	if(contact.getFirstName().equals(firstName))
+		foundContact = contact;
+	}
+		return foundContact;
+	}
+	
+	public static Contact findByLastName(){
+	
+	Contact foundContact = new Contact();
+	String lastName = input("Enter last name : ");
+	for(Contact contact : contacts){
+	if(!contact.getLastName().equals(lastName)){
+		foundContact = null;
+	}
+	if(contact.getLastName().equals(lastName))
+		foundContact = contact;
+	}
+		return foundContact;
+	}
+	public static Contact editContact(){
+	Contact foundContact = new Contact();
+	String first = input("edit first name  : ");
+	foundContact.setFirstName(first);
+	String last = input("Edit last name  : ");
+	foundContact.setLastName(last);
+	String phone = input("Edit phone number  : ");
+	foundContact.setPhoneNumber(phone);
+	String email = input("Edir email address  : ");
+	foundContact.setEmail(email);
+	contacts.add(foundContact);
+	
+		return foundContact;
+	}
+
+
+
     private static String input(String inputValue) {
          Scanner sc = new Scanner(System.in);
         System.out.print(inputValue);
@@ -44,7 +88,12 @@ public class ContactFunction {
                 1-> add contact
                 2-> view all contacts
                 3-> find contact by phone number
-                4-> exit
+		4-> find contact by first name
+		5-> find contact by last name
+		6-> edit contact
+		7-> remove contact
+                8-> exit
+	
                 """);
         switch (otions){
             case "1":
@@ -56,7 +105,18 @@ public class ContactFunction {
             case "3":
                 System.out.println(findByPhoneNumber());
                 display();
-            case "4":
+	   case "4":
+		 System.out.println(findByFirstName());
+                display();
+	  case "5":
+		 System.out.println(findByLastName());
+                display();
+
+	  case "6":
+		 System.out.println(editContact());
+                display();
+
+       case "8":
                 System.out.println("Bye Bye !");
                 System.exit(0);
             default:
@@ -69,7 +129,9 @@ public class ContactFunction {
         System.out.println("""
                 WELCOME TO CHI-CHI CONTACT APPLICATION
                 """);
-        display();
+
+
+        	display();
     }
 
 }
