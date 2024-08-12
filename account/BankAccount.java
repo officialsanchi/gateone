@@ -89,7 +89,7 @@ switch(options){
 			display();
 	case "4": System.out.print("Bye! Bye!!");
 			System.exit(1);
-	default: System.out.println(" Don't be stupid, follow the option: "); display();
+	default: System.out.println(" Don't be stupid sfollow the option: "); display();
 
 }
 

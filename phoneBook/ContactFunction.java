@@ -67,13 +67,23 @@ public static Contact findByFirstName(){
 	foundContact.setLastName(last);
 	String phone = input("Edit phone number  : ");
 	foundContact.setPhoneNumber(phone);
-	String email = input("Edir email address  : ");
+	String email = input("Edit email address  : ");
 	foundContact.setEmail(email);
 	contacts.add(foundContact);
 	
 		return foundContact;
 	}
+	public static Contact removeContact(){
+	Contact foundContact = new Contact();
+	String removeContact = input("Remove contact : ");
+	foundContact.removeContact(Contact);
+	}
+	if(contact.removeContact().equals(Contact))
+		foundContact = contact;
+	}
+		return foundContact;
 
+	1`				`	
 
 
     private static String input(String inputValue) {
@@ -115,8 +125,11 @@ public static Contact findByFirstName(){
 	  case "6":
 		 System.out.println(editContact());
                 display();
-
-       case "8":
+	
+	 case "7":
+		System.out.println(removeContact());
+		display();
+         case "8":
                 System.out.println("Bye Bye !");
                 System.exit(0);
             default:
@@ -132,6 +145,7 @@ public static Contact findByFirstName(){
 
 
         	display();
+	
     }
 
 }

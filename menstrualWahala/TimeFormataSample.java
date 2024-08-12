@@ -7,6 +7,6 @@ public class TimeFormataSample{
 LocalDate date = LocalDate.now();
 DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
 String formattedDate = date.format(formatter);
-System.out.println(formattedDate); // Output: 2024-08-10
+System.out.println(formattedDate);
 }
 }
