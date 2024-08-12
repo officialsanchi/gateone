@@ -11,6 +11,7 @@ public class MenstrualApp {
 
         System.out.println("CHECK YOUR MENSTRUAL CYCLE");
 
+
         System.out.println("Enter the first day of your period (YYYY-MM-DD):");
         String firstDayInput = scanner.next();
         LocalDate firstDay = LocalDate.parse(firstDayInput, formatter);
@@ -30,5 +31,8 @@ public class MenstrualApp {
         System.out.println("Your ovulation date is: " + ovulation);
 	System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
         System.out.println("Your second safe period is within: " + ovulation.plusDays(1) + " to " + safePeriod2);
+System.out.println("NOTE NORMAL CYCLE IS 21 DAYS TO 35 DAYS");
+
+System.out.println("IF YOUR CYCLE IS LESS THAN 21 DAYS OR GREATER THAN 35 DAYS IT ABNORMAL");
     }
 }
