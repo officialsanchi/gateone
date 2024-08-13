@@ -24,7 +24,7 @@ public class ContactFunction {
         Contact foundContact = null;
         String phoneNumber = input("Enter phone number: ");
         for (Contact contact : contacts) {
-            if (contact.getPhoneNumber()==null) {
+            if (contact.getPhoneNumber()==null){
                 foundContact = null;
             }
             if (contact.getPhoneNumber().equals(phoneNumber))
@@ -73,18 +73,7 @@ public static Contact findByFirstName(){
 	
 		return foundContact;
 	}
-	public static Contact removeContact(){
-	Contact foundContact = new Contact();
-	String removeContact = input("Remove contact : ");
-	foundContact.removeContact(Contact);
-	}
-	if(contact.removeContact().equals(Contact))
-		foundContact = contact;
-	}
-		return foundContact;
-
-	1`				`	
-
+	
 
     private static String input(String inputValue) {
          Scanner sc = new Scanner(System.in);
@@ -95,14 +84,13 @@ public static Contact findByFirstName(){
 
         public static void display(){
         String otions = input("""
-                1-> add contact
-                2-> view all contacts
-                3-> find contact by phone number
-		4-> find contact by first name
-		5-> find contact by last name
-		6-> edit contact
-		7-> remove contact
-                8-> exit
+	1-> add contact
+	2-> view all contacts
+	3-> find contact by phone number
+	4-> find contact by first name
+	5-> find contact by last name
+	6-> edit contact
+	7-> exit
 	
                 """);
         switch (otions){
@@ -126,10 +114,8 @@ public static Contact findByFirstName(){
 		 System.out.println(editContact());
                 display();
 	
-	 case "7":
-		System.out.println(removeContact());
-		display();
-         case "8":
+	
+         case "7":
                 System.out.println("Bye Bye !");
                 System.exit(0);
             default:

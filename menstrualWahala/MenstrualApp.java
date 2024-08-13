@@ -10,6 +10,13 @@ public class MenstrualApp {
         DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
 
         System.out.println("CHECK YOUR MENSTRUAL CYCLE");
+	System.out.println("What is your name : ");
+	String name = scanner.nextLine();
+	System.out.println("how old are you : ");
+	int age = scanner.nextInt();
+
+
+
 
 
         System.out.println("Enter the first day of your period (YYYY-MM-DD):");
@@ -21,6 +28,9 @@ public class MenstrualApp {
         LocalDate safePeriod1 = lengthOfFlow.plusDays(3);
         LocalDate ovulation = safePeriod1.plusDays(3);
         LocalDate safePeriod2 = ovulation.plusDays(4);
+
+	System.out.println(name);
+	System.out.println(age);
 
         System.out.println("Your next period is expected on: " + nextPeriod.format(formatter));
 	System.out.println("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>");

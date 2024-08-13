@@ -2,6 +2,10 @@ from datetime import datetime, timedelta
 
 print("CHECK YOUR MENSTRUAL CYCLE")
 
+name = input("What is your name :")
+age = input ("how old are you : ")
+
+
 first_day_input = input("Enter the first day of your period (YYYY-MM-DD): ")
 first_day = datetime.strptime(first_day_input, "%Y-%m-%d").date()
 next_period = first_day + timedelta(days=25)
